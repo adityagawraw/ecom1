@@ -4,8 +4,8 @@ import SingleProduct from "./SingleProduct";
 
 export default function Home({ cartArr, setCartArr, products }) {
 
-    let [categoryArr, setCategoryArr] = useState([]);
-
+    let [categoryArr, setCategoryArr] = useState([...products]);
+// console.log(cartArr);
 
 
     return (

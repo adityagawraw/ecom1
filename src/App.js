@@ -16,13 +16,13 @@ function App() {
                 .then(res=>res.json())
                 .then(json=> setProducts(json))
      },[]);
-     
+
+ 
 
   return (
     <BrowserRouter>
-      <div >
-        
-<Header className="header" />
+      <div>
+<Header className="header"  cartArr={cartArr}/>
         <Routes>
           <Route path='/' element={<Home cartArr={cartArr} setCartArr={setCartArr}  products={products} />}></Route>
           <Route path='/cart' element={<Cart cartArr={cartArr} setCartArr={setCartArr} />}></Route>
